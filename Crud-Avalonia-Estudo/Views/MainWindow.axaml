@@ -15,7 +15,7 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-	<Grid ColumnDefinitions="100,*" RowDefinitions="Auto,Auto,Auto"  Margin="4">
+	<Grid ColumnDefinitions="100,*" RowDefinitions="Auto,Auto,*"  Margin="24">
         <TextBlock 
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
@@ -29,6 +29,21 @@
             Margin="0,3,0,0"
             HorizontalAlignment="Right"
             Content="Salvar" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="1"/>
+
+        <DataGrid
+            Grid.ColumnSpan="2"
+            Grid.Column="0"
+            Grid.Row="2"
+                  >
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nome"  Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Surname" Binding="{Binding LastName}" />
+            </DataGrid.Columns>
+
+		</DataGrid>
     </Grid>
+
+    
 
 </Window>
