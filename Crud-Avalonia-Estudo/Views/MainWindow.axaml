@@ -22,13 +22,18 @@
             FontSize="20"
             FontWeight="Bold"
             Text="Nome:" Grid.Row="0" Grid.Column="0"/>
-        <TextBox Grid.Row="0" Grid.Column="1"></TextBox>
+
+
+        <TextBox Grid.Row="0" Grid.Column="1"
+                 Text="{Binding Nome}"></TextBox>
         
         
         <Button 
             Margin="0,3,0,0"
             HorizontalAlignment="Right"
-            Content="Salvar" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="1"/>
+            Content="Salvar"
+            Click="Salvar_OnClick"
+            Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="1"/>
 
         <DataGrid
             Grid.ColumnSpan="2"
@@ -37,8 +42,7 @@
                   >
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nome"  Binding="{Binding FirstName}"/>
-                <DataGridTextColumn Header="Surname" Binding="{Binding LastName}" />
+                <DataGridTextColumn Header="Nome"  Binding="{Binding Nome}"/>
             </DataGrid.Columns>
 
 		</DataGrid>
